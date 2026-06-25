@@ -36,7 +36,7 @@ Berikut adalah tampilan antarmuka dari aplikasi game:
 - `GUI Frames`: Modul antarmuka (`LoginFrame`, `MainMenuFrame`, `GameFrame`, `StatisticsFrame`, `TopScorersFrame`).
 
 ## Cara Setup & Menjalankan Proyek
-1. Nyalakan MySQL server lokal (XAMPP/Bitnami) di port `3307`.
+1. Nyalakan MySQL server lokal Bitnami di port `3307`.
 2. Masuk ke phpMyAdmin, buat database baru bernama `game_project`.
 3. Import file `schema.sql` yang ada di dalam folder `database` ke database tersebut.
 4. Buka proyek ini di IntelliJ IDEA.

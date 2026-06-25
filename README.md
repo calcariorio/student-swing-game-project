@@ -1,34 +1,44 @@
-# Simple Tic-Tac-Toe Game with Java Swing, Login, and Statistics
+# Tugas Besar Pemrograman Fundamental - Game Tic-Tac-Toe Java Swing
 
-## Student Information
-- **Name:** Calcario Yusuf Endrokusumo
-- **Student ID (NRP):** 5026251185
-- **Class:** Programming Fundamental
+## Data Mahasiswa
+- **Nama:** Calcario Yusuf Endrokusumo
+- **NRP:** 5026251185
+- **Kelas:** Programming Fundamental
+- **Link Video Demo:** [Masukkan Link Video YouTube Lu di Sini]
 
-## Project Description
-[cite_start]Aplikasi ini adalah game Tic-Tac-Toe sederhana yang dibangun menggunakan Java Swing GUI, konsep pemrograman berorientasi objek (OOP) dasar, dan penyimpanan database relasional satu tabel[cite: 25]. [cite_start]Proyek ini memenuhi tugas akhir praktikum Programming Fundamental[cite: 4, 5].
+## Deskripsi Proyek
+Aplikasi ini adalah game Tic-Tac-Toe berbasis desktop menggunakan Java Swing GUI. Data pemain dan statistik game diintegrasikan dengan database MySQL melalui JDBC menggunakan arsitektur satu tabel (One-Table Rule) sesuai modul panduan.
 
-## Features
-1. [cite_start]**Database-Backed Login:** Autentikasi pengguna secara real-time dari tabel database[cite: 98].
-2. [cite_start]**Interactive Tic-Tac-Toe Game:** Arena tanding pemain (X) melawan komputer (O) dengan validasi langkah[cite: 109, 142].
-3. [cite_start]**Real-time Statistics:** Mencatat jumlah Wins, Losses, Draws, dan akumulasi total skor langsung setelah game selesai[cite: 115].
-4. [cite_start]**Top 5 Leaderboard:** Menampilkan peringkat 5 besar skor tertinggi menggunakan komponen `JTable`[cite: 117, 120].
+## Dokumentasi GUI
+Berikut adalah tampilan antarmuka dari aplikasi game:
 
-## Class Architecture & Responsibility
-- [cite_start]`Main`: Titik masuk awal program untuk meluncurkan jendela login[cite: 244].
-- [cite_start]`DatabaseManager`: Mengatur konfigurasi driver JDBC dan koneksi ke MySQL[cite: 244].
-- [cite_start]`Player`: Kelas model data untuk menyimpan informasi profil dan skor pemain[cite: 244].
-- [cite_start]`playerService`: Menangani operasi query database (login, update statistik, dan leaderboard)[cite: 244].
-- [cite_start]`GameLogic`: Mengatur aturan main game, validasi slot kosong, cek kondisi menang/seri, dan pergerakan bot[cite: 244].
-- [cite_start]`Frames (GUI)`: `LoginFrame`, `MainMenuFrame`, `GameFrame`, `StatisticsFrame`, dan `TopScorersFrame` untuk interaksi user[cite: 244].
+### 1. Jendela Login
+![Login Window](login-window.png)
 
-## Database Setup
-1. Pastikan server MySQL (XAMPP/Bitnami) lu sudah berjalan pada port `3307`.
-2. Buat database baru bernama `game_project`.
-3. Impor berkas struktur tabel yang berada di folder `database/schema.sql`.
+### 2. Arena Permainan Tic-Tac-Toe
+![Game Window](game-window.png)
 
-## How to Run
-1. Buka proyek ini menggunakan IntelliJ IDEA.
-2. [cite_start]Pastikan MySQL JDBC Driver sudah ditambahkan ke dalam dependencies modul proyek[cite: 685].
-3. Sesuaikan konfigurasi `USER` dan `PASSWORD` database lu pada file `DatabaseManager.java`.
-4. [cite_start]Jalankan berkas `Main.java`[cite: 259].
+### 3. Papan Peringkat (Top 5 Leaderboard)
+![Top Scorers Window](top-scorers-window.png)
+
+## Fitur Utama
+1. **Login Database:** Autentikasi user langsung mencocokkan username & password dari tabel database.
+2. **Game Arena ($3\times3$):** Player (X) bertanding melawan Bot komputer (O) dengan validasi slot agar tidak bisa klik kolom yang sudah terisi.
+3. **Statistik Real-time:** Menghitung jumlah menang ($+10$ poin), kalah ($+0$ poin), dan seri ($+3$ poin) yang otomatis ter-update ke database setelah game selesai.
+4. **Top 5 Leaderboard:** Menampilkan peringkat 5 pemain dengan skor tertinggi menggunakan komponen `JTable`.
+
+## Struktur Class
+- `Main`: Entry point untuk menjalankan `LoginFrame` pertama kali.
+- `DatabaseManager`: Mengatur koneksi JDBC Driver ke MySQL (Port `3307`, user `bn_processmaker`, password `d343ddc261`).
+- `Player`: Model objek data untuk menyimpan *state* profil pemain di memori runtime.
+- `playerService`: Handler query database untuk login, update skor, dan select Top 5.
+- `GameLogic`: Logika inti game (cek menang/seri dan penentuan langkah bot).
+- `GUI Frames`: Modul antarmuka (`LoginFrame`, `MainMenuFrame`, `GameFrame`, `StatisticsFrame`, `TopScorersFrame`).
+
+## Cara Setup & Menjalankan Proyek
+1. Nyalakan MySQL server lokal (XAMPP/Bitnami) di port `3307`.
+2. Masuk ke phpMyAdmin, buat database baru bernama `game_project`.
+3. Import file `schema.sql` yang ada di dalam folder `database` ke database tersebut.
+4. Buka proyek ini di IntelliJ IDEA.
+5. Pastikan `mysql-connector-j-9.x.x.jar` sudah dimasukkan ke modul Dependencies proyek.
+6. Jalankan file `Main.java`.

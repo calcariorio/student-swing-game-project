@@ -3,7 +3,7 @@
 ## Data Mahasiswa
 - **Nama:** Calcario Yusuf Endrokusumo
 - **NRP:** 5026251185
-- **Kelas:** Programming Fundamental
+- **Kelas:** Pemrograman Dasar (E)
 - **Link Video Demo:** [Masukkan Link Video YouTube Lu di Sini]
 
 ## Deskripsi Proyek

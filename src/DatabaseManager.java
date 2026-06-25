@@ -3,7 +3,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseManager {
-    // Port disesuaikan ke 3307 dan user disesuaikan ke bn_processmaker sesuai sistem Bitnami lu
+    //menggunakan phpmyadmin (sebagai database) via bitnami Launcher dengan port 3307 dan username serta password phpmyadmin dari file bitnami.
     private static final String URL = "jdbc:mysql://localhost:3307/game_project";
     private static final String USER = "bn_processmaker";
     private static final String PASSWORD = "d343ddc261";

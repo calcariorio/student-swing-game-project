@@ -1,4 +1,4 @@
-# Tugas Besar Pemrograman Fundamental - Game Tic-Tac-Toe Java Swing
+# Programming Fundamental Small Project - Game Tic-Tac-Toe Java Swing
 
 ## Data Mahasiswa
 - **Nama:** Calcario Yusuf Endrokusumo

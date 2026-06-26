@@ -4,7 +4,7 @@
 - **Nama:** Calcario Yusuf Endrokusumo
 - **NRP:** 5026251185
 - **Kelas:** Pemrograman Dasar (E)
-- **Link Video Demo:** [Masukkan Link Video YouTube Lu di Sini]
+- **Link Video Demo:** [(https://youtu.be/yOAjn70-IJ8?si=mFcQaZwj2FGIDBkx)]
 
 ## Deskripsi Proyek
 Aplikasi ini adalah game Tic-Tac-Toe berbasis desktop menggunakan Java Swing GUI. Data pemain dan statistik game diintegrasikan dengan database MySQL melalui JDBC menggunakan arsitektur satu tabel (One-Table Rule) sesuai modul panduan.
